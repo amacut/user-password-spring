@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{phones}"></title>
+</head>
+<body>
+
+<div class="container">
+    <h1 th:text="#{phones}"></h1>
+    <table class="table">
+        <thead>
+        <tr class="thead-dark">
+            <td>Numer</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="phone : ${phones}">
+            <td th:text="${phone.phoneNumber}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
